@@ -17,18 +17,12 @@ const routes: Routes = [
     path: 'contact',
     component: ContactComponent
   },
-  {
-    path: 'comments',
-    // loadChildren: './pages/comments/comments.module#CommentsModule'
-    loadChildren: () => import('./pages/comments/comments.module').then(m => m.CommentsModule)
-  },
+  
   {
     path: '**',
     redirectTo: 'home'
   }
 
-
-  
 ];
 
 @NgModule({
